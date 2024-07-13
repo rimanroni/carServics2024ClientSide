@@ -9,7 +9,7 @@ const Navbar = () => {
         {title:'Home',link:"/"},
         {title:'About',link:"/about"},
         {title:'Services',link:"/services"},
-        {title:'Blog ',link:"/blog "},
+        {title:'Blog ',link:"/blog"},
         {title:'Contact',link:"/contact"}
      ];
      const [profile , setProfile] = useState(false);

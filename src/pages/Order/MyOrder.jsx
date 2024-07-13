@@ -9,7 +9,7 @@ const MyOrder = () => {
     const {user , loading} = useContext(MyContaxt);
     const [data, setData] = useState([])
     useEffect(()=>{
-         fetch(`http://localhost:5000/order?email=${user?.email}`)
+         fetch(`https://car-servics2024-server-side.vercel.app/order?email=${user?.email}`)
         .then(res=>res.json())
         .then(data=>setData(data))
     },[user]);
@@ -27,7 +27,7 @@ const MyOrder = () => {
             confirmButtonText: "Yes, delete it!"
           }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/order/${id}`,{
+                fetch(`https://car-servics2024-server-side.vercel.app/order/${id}`,{
                     method:"DELETE"
                     
                 })

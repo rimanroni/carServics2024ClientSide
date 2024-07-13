@@ -4,7 +4,7 @@ const Products = () => {
     const [data, setData] = useState([]);
     const array = ['','','','','','']
     useEffect(()=>{
-        fetch('http://localhost:5000/products')
+        fetch('https://car-servics2024-server-side.vercel.app/products')
         .then(res=>res.json())
         .then(data=>setData(data))
     },[])

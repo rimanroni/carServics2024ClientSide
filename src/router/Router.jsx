@@ -14,6 +14,8 @@ import Error from "../pages/Error/Error";
 import CheckOut from "../shared/CheckOut/CheckOut";
 import PrivetRouter from "./PrivetRouter";
 import MyOrder from "../pages/Order/MyOrder";
+import Blog from "../pages/Blog/Blog";
+import Contact from "../pages/Contact/Contact";
  
 
 const router = createBrowserRouter([
@@ -31,7 +33,7 @@ const router = createBrowserRouter([
   {
     path:'/servics/:id',
     element : <ServicesDetails/>,
-    loader : ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
+    loader : ({params}) => fetch(`https://car-servics2024-server-side.vercel.app/services/${params.id}`)
   },
   {
     path:"/login",
@@ -54,11 +56,19 @@ const router = createBrowserRouter([
     element: <PrivetRouter>
         <CheckOut/>
     </PrivetRouter>,
-    loader : ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
+    loader : ({params}) => fetch(`https://car-servics2024-server-side.vercel.app/services/${params.id}`)
    },
    {
     path:'/orders',
     element:<MyOrder/>
+   },
+   {
+    path:'/blog',
+    element:<Blog/>
+   },
+   {
+    path:"/contact",
+    element:<Contact/>
    }
 ]);
 
