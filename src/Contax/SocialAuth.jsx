@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FaFacebook, FaGoogle, FaLinkedin } from 'react-icons/fa';
+import { MyContaxt } from './Contax';
 
 const SocialAuth = () => {
+    const { handleGoogle} = useContext(MyContaxt)
+    const google = ( )=>{
+        handleGoogle()
+        .then(res=>res.json())
+        .catch(error=>console.log(error))
+    }
     return (
         <div className='flex py-4 space-x-4 justify-center items-center'>
             <button className='bg-[#F5F5F8] p-3 text-xl rounded-full flex items-center text-[#3B5998]'><FaFacebook/></button>
             <button className='bg-[#F5F5F8] p-3 text-xl rounded-full flex items-center text-[#0A66C2]'><FaLinkedin/></button>
-            <button className='bg-[#F5F5F8] p-3 text-xl rounded-full flex items-center'>
+            <button onClick={google}  className='bg-[#F5F5F8] p-3 text-xl rounded-full flex items-center'>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
             <g clip-path="url(#clip0_351_751)">
                 <path d="M4.6875 10.0001C4.6875 9.00919 4.96051 8.08095 5.4348 7.28615V3.91474H2.0634C0.725313 5.65255 0 7.77048 0 10.0001C0 12.2297 0.725313 14.3476 2.0634 16.0854H5.4348V12.714C4.96051 11.9192 4.6875 10.991 4.6875 10.0001Z" fill="#FBBD00"/>

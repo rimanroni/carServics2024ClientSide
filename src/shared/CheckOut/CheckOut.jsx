@@ -7,6 +7,7 @@ import Swal from 'sweetalert2';
 
 const CheckOut = () => {
     const data = useLoaderData();
+    const {img, price , title} = data;
     const {user} = useContext(MyContaxt);
     const handleForm  = (event) =>{
         event.preventDefault();
@@ -16,7 +17,7 @@ const CheckOut = () => {
         const date = form.date.value;
         const phone = form.phone.value;
         const message = form.message.value;
-        const order = {name, email, date , phone, message};
+        const order = {name, img, price, title, email, date , phone, message};
         fetch('http://localhost:5000/order',{
             method:"POST",
             headers:{

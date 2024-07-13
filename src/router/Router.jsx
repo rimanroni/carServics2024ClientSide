@@ -13,6 +13,7 @@ import ServicsRouter from "../pages/Servics/ServicsRouter";
 import Error from "../pages/Error/Error";
 import CheckOut from "../shared/CheckOut/CheckOut";
 import PrivetRouter from "./PrivetRouter";
+import MyOrder from "../pages/Order/MyOrder";
  
 
 const router = createBrowserRouter([
@@ -54,8 +55,11 @@ const router = createBrowserRouter([
         <CheckOut/>
     </PrivetRouter>,
     loader : ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
-
-  }
+   },
+   {
+    path:'/orders',
+    element:<MyOrder/>
+   }
 ]);
 
 export default router;

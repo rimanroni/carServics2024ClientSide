@@ -69,7 +69,7 @@ const Navbar = () => {
                 <div className='relative'>
                    {user?<div className='z-50 relative'>
                     <button onClick={handleProfile } className='text-4xl'>
-                    <FaRegUserCircle />
+                     {user?.photoURL? <img className='rounded-full w-[50px]' src={user.photoURL}/>:<FaRegUserCircle />}
                     </button>
                     <div className={` ${profile?'block' : 'hidden'} absolute    bg-white shadow-lg px-8 right-12  duration-500 translate-x-0 py-2 w-[200px]`}>
                         <p onClick={handeleX } className='absolute -right-2 -top-1 cursor-pointer rounded-full font-bold text-white  w-[20px] h-[20px] flex justify-center items-center bg-primaryColor'><span>x</span></p>

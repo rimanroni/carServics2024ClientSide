@@ -62,8 +62,9 @@ const Singup = () => {
                      <span onClick={handleType} className='inline-bolck absolute -right-0  mr-1'><MdPassword/></span>
                    </div>
                     <button className='w-full rounded font-bold text-white bg-primaryColor py-2'> Sing Up</button>
+                    <p className='text-center'>Or Sign Up with</p>
+
                    <div className='text-center'>
-                    <p>Or Sign Up with</p>
                     <SocialAuth/>
                     <p> Have an account? <Link
                     className='text-primaryColor font-bold'
