@@ -41,6 +41,15 @@ body {
     background-position-x: center;
     background-position-y: center
   }
+
+  #videoBanner{
+    background-image: url('/assets/images/banner/2.jpg');
+    background-size: cover;
+    cursor: pointer;
+    margin-top: 10px;
+    background-position-x: cover;
+    background-position-y: cover;
+  }
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

@@ -3,12 +3,16 @@ import Navbar from '../../Navbar/Navbar';
 import { Helmet } from 'react-helmet';
 import { Link, useLoaderData } from 'react-router-dom';
 import ServicsDetailsCard from './ServicsDetailsCard';
+import Footer from '../../Footer/Footer';
+import SiderCard from './SiderCard';
 
 const ServicesDetails = () => {
     const loadedData = useLoaderData();
+    const {price , _id} = loadedData;
    
     return (
-        <div className='pb-12'>
+        <div>
+            <div className='pb-12'>
              <Helmet>
                  <title>Servics Details</title>
              </Helmet>
@@ -28,14 +32,15 @@ const ServicesDetails = () => {
  
              </div>
              <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mt-8  px-8 lg:grid-cols-3'>
-             <div className='col-span-2 border'>
+             <div className='col-span-2 '>
                 <ServicsDetailsCard loadedData={loadedData}/>
              </div>
-             <div className='border'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, pariatur.
+             <div className=''>
+                <SiderCard _id={_id} price={price}/>
              </div>
              </div>
-
+        </div>
+        <Footer/>
         </div>
     );
 };
