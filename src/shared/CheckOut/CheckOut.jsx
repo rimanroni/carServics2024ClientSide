@@ -18,7 +18,7 @@ const CheckOut = () => {
         const phone = form.phone.value;
         const message = form.message.value;
         const order = {name, img, price, title, email, date , phone, message};
-        fetch('http://localhost:5000/order',{
+        fetch('https://car-server-3h59dvx67-roni-rimans-projects.vercel.app/order',{
             method:"POST",
             headers:{
                 'content-type' :"application/json"
